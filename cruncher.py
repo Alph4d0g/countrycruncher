@@ -1,6 +1,8 @@
 import argparse
 from itertools import groupby
 from operator import itemgetter
+import sys
+sys.setrecursionlimit(10000) 
 
 parser = argparse.ArgumentParser()
 parser.add_argument("inputfile", help="Place you source file here")
