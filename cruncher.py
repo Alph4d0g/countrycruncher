@@ -2,7 +2,7 @@ import argparse
 from itertools import groupby
 from operator import itemgetter
 import sys
-sys.setrecursionlimit(10000) 
+sys.setrecursionlimit(10000)
 
 parser = argparse.ArgumentParser()
 parser.add_argument("inputfile", help="Place you source file here")
@@ -53,6 +53,6 @@ with open(args.inputfile, 'r') as original:
                     number = number[2:]
                     nsn = number[len(filter(number.startswith,tuple(ccs+['']))[0]):]
                     cc = number[:-len(nsn)]
-                    data.append([cc,nsn]) 
+                    data.append([cc,nsn])
         for block in genallblocks(data):
             output.write(block[0]+","+block[1])
